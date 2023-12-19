@@ -1,0 +1,6 @@
+2023-12-16 15:57:12,934 [ERROR] - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2023-12-16 16:01:35,224 [ERROR] - An error occurred: name 'BytesIO' is not defined
