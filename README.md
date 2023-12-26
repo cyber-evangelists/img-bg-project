@@ -1,5 +1,5 @@
-# img-bg-project
+# Image-Background-Removal
 This Repo contains FastAPI for Background Removal,Background Replacement and Water Mark Removal
 
 Command to run 
->> uvicorn main:app --reload --port 8000 --host 0.0.0.0
+>> uvicorn main:app --reload
