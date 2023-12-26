@@ -5,5 +5,5 @@ Pillow
 scikit-learn
 uvicorn
 python-multipart
-tensorflow==2.4.1
+tensorflow==2.11.1
 pixellib
