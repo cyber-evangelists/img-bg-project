@@ -4,3 +4,26 @@ You can install "python-multipart" with:
 pip install python-multipart
 
 2023-12-16 16:01:35,224 [ERROR] - An error occurred: name 'BytesIO' is not defined
+2023-12-19 21:58:49,145 [ERROR] - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2023-12-19 22:00:47,273 [ERROR] - An error occurred: new() missing 1 required positional argument: 'size'
+2023-12-19 22:17:34,939 [ERROR] - An error occurred: new() missing 1 required positional argument: 'size'
+2023-12-19 22:29:32,348 [ERROR] - An error occurred: unknown color specifier: 'rgba'
+2023-12-19 22:32:11,147 [ERROR] - An error occurred: 'coroutine' object has no attribute 'save'
+2023-12-19 22:33:07,678 [ERROR] - An error occurred: 'coroutine' object has no attribute 'save'
+2023-12-19 22:35:36,317 [ERROR] - An error occurred: 'coroutine' object has no attribute 'save'
+2023-12-19 22:37:14,120 [ERROR] - An error occurred: 'coroutine' object has no attribute 'save'
+2023-12-19 22:37:57,932 [ERROR] - An error occurred: 'coroutine' object has no attribute 'save'
+2023-12-19 22:42:19,978 [ERROR] - An error occurred: 'coroutine' object has no attribute 'save'
+2023-12-19 22:45:22,200 [ERROR] - An error occurred: 'WindowsPath' object has no attribute 'filename'
+2023-12-19 22:45:22,202 [ERROR] - An error occurred: 'JSONResponse' object has no attribute 'save'
+2023-12-19 22:50:17,113 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
+2023-12-19 23:05:16,269 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
+2023-12-19 23:06:29,095 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
+2023-12-19 23:08:27,943 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
+2023-12-19 23:09:10,313 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
+2023-12-19 23:12:04,269 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
+2023-12-19 23:12:28,205 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
