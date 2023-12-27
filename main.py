@@ -1,9 +1,11 @@
 import tempfile
 from removebg import replace_background
+from removebg import remove_bg
 from fastapi import FastAPI, UploadFile
 from pathlib import Path
 from fastapi.responses import FileResponse
 from io import BytesIO
+from PIL import Image
 import shutil
 import logging
 from fastapi.responses import JSONResponse

@@ -27,3 +27,15 @@ pip install python-multipart
 2023-12-19 23:09:10,313 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
 2023-12-19 23:12:04,269 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
 2023-12-19 23:12:28,205 [ERROR] - An error occurred: [Errno 2] No such file or directory: 'C:\\Users\\umair\\Documents\\GitHub\\Image-Background-Removal\\temp\\sample_background.jpeg'
+2023-12-27 17:36:03,191 [ERROR] - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2023-12-27 17:36:57,005 [ERROR] - An error occurred: name 'remove_bg' is not defined
+2023-12-27 17:37:00,915 [ERROR] - An error occurred: name 'remove_bg' is not defined
+2023-12-27 17:37:35,410 [ERROR] - An error occurred: name 'Image' is not defined
+2023-12-27 17:49:35,202 [ERROR] - An error occurred: local variable 'resized_img' referenced before assignment
+2023-12-27 17:51:25,463 [ERROR] - An error occurred: local variable 'resized_img' referenced before assignment
+2023-12-27 17:52:17,983 [ERROR] - An error occurred: 'str' object has no attribute 'size'
+2023-12-27 17:52:59,937 [ERROR] - An error occurred: local variable 'resized_img' referenced before assignment
