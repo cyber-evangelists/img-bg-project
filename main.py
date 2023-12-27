@@ -9,7 +9,8 @@ from PIL import Image
 import shutil
 import logging
 from fastapi.responses import JSONResponse
-
+from removebg import remove_bg
+from PIL import Image
 # Configure the logger
 logging.basicConfig(filename="app.log", level=logging.INFO, format="%(asctime)s [%(levelname)s] - %(message)s")
 
