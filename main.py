@@ -9,11 +9,23 @@ import logging
 from fastapi.responses import JSONResponse
 from removebg import remove_bg
 from PIL import Image
+from fastapi.middleware.cors import CORSMiddleware
+
 # Configure the logger
 logging.basicConfig(filename="app.log", level=logging.INFO, format="%(asctime)s [%(levelname)s] - %(message)s")
 
 # Create a FastAPI application
 app = FastAPI(debug=True, title='Image Editing', summary='This API Provides Access to all Endpoints of Image Editing API')
+
+# add middlewares to all origins
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # Define an endpoint to receive and save the image
 @app.post("/remove_background/")
