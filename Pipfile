@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "==0.104.0"
+pillow = "*"
+rembg = "==2.0.52"
+scikit-learn = "*"
+uvicorn = "*"
+python-multipart = "*"
+tensorflow = "*"
+pixellib = "*"
+secrets = "*"
+pydantic = "*"
+pyjwt = "==2.6.0"
+python-decouple = "==3.7"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

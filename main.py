@@ -1,6 +1,6 @@
 import tempfile
 from removebg import replace_background
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, UploadFile, Body, Depends
 from pathlib import Path
 from fastapi.responses import FileResponse
 from io import BytesIO
@@ -10,6 +10,9 @@ from fastapi.responses import JSONResponse
 from removebg import remove_bg
 from PIL import Image
 from fastapi.middleware.cors import CORSMiddleware
+from app.model import UserSchema, UserLoginSchema
+from app.auth.auth_handler import signJWT
+from app.auth.auth_bearer import JWTBearer
 
 # Configure the logger
 logging.basicConfig(filename="app.log", level=logging.INFO, format="%(asctime)s [%(levelname)s] - %(message)s")
@@ -26,9 +29,30 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+def check_user(data: UserLoginSchema):
+    for user in users:
+        if user.email == data.email and user.password == data.password:
+            return True
+    return False
+users=[]
+#User Signup
+@app.post("/user/signup", tags=["user"])
+async def create_user(user: UserSchema = Body(...)):
+    users.append(user) # replace with db call, making sure to hash the password first
+    return signJWT(user.email)
+
+
+@app.post("/user/login", tags=["user"])
+async def user_login(user: UserLoginSchema = Body(...)):
+    if check_user(user):
+        return signJWT(user.email)
+    return {
+        "error": "Wrong login details!"
+    }
+
 
 # Define an endpoint to receive and save the image
-@app.post("/remove_background/")
+@app.post("/remove_background/",dependencies=[Depends(JWTBearer())],tags=['remove-background'])
 async def remove_background(file: UploadFile):
     try:
         # Create a directory to save the uploaded files if it doesn't exist
@@ -58,7 +82,7 @@ async def remove_background(file: UploadFile):
     
     
 # Define an endpoint to replace the background
-@app.post("/replace_background/")
+@app.post("/replace_background/",dependencies=[Depends(JWTBearer())],tags=['replace-background'])
 async def rep_background(file: UploadFile, background: UploadFile):
     try:
         # Create a directory to save the uploaded files if it doesn't exist

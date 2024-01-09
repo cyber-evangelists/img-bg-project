@@ -1,9 +1,11 @@
-fastapi==0.104.0
-Pillow==10.1.0
-rembg==2.0.52
-Pillow
-scikit-learn
-uvicorn
-python-multipart
-tensorflow
-pixellib
+# fastapi==0.104.0
+# Pillow==10.1.0
+# rembg==2.0.52
+# scikit-learn
+# uvicorn
+# python-multipart
+# tensorflow
+# pixellib
+pydantic
+PyJWT==2.6.0
+python-decouple==3.7
