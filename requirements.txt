@@ -24,7 +24,7 @@ matplotlib==3.5.3
 numpy
 opencv-python==4.9.0.80
 packaging==23.2
-Pillow==9.5.0
+Pillow==10.0.1
 pydantic==2.5.3
 pydantic_core==2.14.6
 pyparsing==3.1.1
