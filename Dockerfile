@@ -4,10 +4,13 @@ FROM ubuntu:22.04
 # Avoid prompts from apt
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Add the deadsnakes PPA for Python 3.9
+RUN apt-get update && apt-get install -y software-properties-common
+RUN add-apt-repository ppa:deadsnakes/ppa
+
 # Install Python 3.9 and pip
 RUN apt-get update && apt-get install -y \
     python3.9 \
-    python3.9-distutils \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
