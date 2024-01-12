@@ -42,3 +42,6 @@ pip install python-multipart
 2024-01-10 18:48:17,364 [ERROR] - An error occurred: '_OpNamespace' 'image' object has no attribute 'read_file'
 2024-01-10 18:48:19,185 [ERROR] - An error occurred: '_OpNamespace' 'image' object has no attribute 'read_file'
 2024-01-10 18:50:28,885 [ERROR] - An error occurred: '_OpNamespace' 'image' object has no attribute 'read_file'
+2024-01-11 18:19:46,486 [ERROR] - An error occurred: '_OpNamespace' 'image' object has no attribute 'read_file'
+2024-01-11 18:27:21,152 [ERROR] - An error occurred: '_OpNamespace' 'image' object has no attribute 'read_file'
+2024-01-11 18:40:42,821 [ERROR] - An error occurred: '_OpNamespace' 'image' object has no attribute 'read_file'
