@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get install python3-distutils
 # Update alternatives to use Python 3.9
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
 
