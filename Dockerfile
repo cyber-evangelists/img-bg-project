@@ -4,19 +4,19 @@ FROM ubuntu:22.04
 # Avoid prompts from apt
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Add the deadsnakes PPA for Python 3.9
-RUN apt-get update && apt-get install -y software-properties-common
-RUN add-apt-repository ppa:deadsnakes/ppa
-
-# Install Python 3.9 and pip
+# Install Python 3.9, pip, distutils, and development tools
 RUN apt-get update && apt-get install -y \
     python3.9 \
+    python3-distutils \
     python3-pip \
+    build-essential \    
+    libssl-dev \          
+    libffi-dev \          
+    zlib1g-dev \          
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install python3-distutils
 # Update alternatives to use Python 3.9
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
+# RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
 
 # Install system dependencies for PyQt5 and other packages
 RUN apt-get update && apt-get install -y \
