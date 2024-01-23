@@ -138,12 +138,12 @@ def remove_bg(img):
     print('removing')
 
     # Automatically crop the image
-    croppedImage = autocrop_image(removedBGimage, 0)
-    print('croping')
-    # Resize the cropped image to a specific size (700 pixels in this case)
-    resizedImage = resize_image(croppedImage, 700)
-    print('resizing')
-    # Create a new canvas with a specific size (1000x1000) and paste the image onto it
-    combinedImage = resize_canvas(resizedImage, 1000, 1000)
+    # croppedImage = autocrop_image(removedBGimage, 0)
+    # print('croping')
+    # # Resize the cropped image to a specific size (700 pixels in this case)
+    # resizedImage = resize_image(croppedImage, 700)
+    # print('resizing')
+    # # Create a new canvas with a specific size (1000x1000) and paste the image onto it
+    # combinedImage = resize_canvas(resizedImage, 1000, 1000)
     print('resizing canvas')
-    return combinedImage
+    return removedBGimage
