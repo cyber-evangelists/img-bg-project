@@ -38,3 +38,5 @@ torchvision
 typing_extensions
 urllib3
 zipp
+PyJWT
+python-decouple==3.3

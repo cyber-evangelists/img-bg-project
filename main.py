@@ -1,6 +1,6 @@
 import tempfile
 from removebg import replace_background
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, UploadFile, Body, Depends,HTTPException
 from pathlib import Path
 from fastapi.responses import FileResponse
 from io import BytesIO
@@ -24,6 +24,13 @@ from pathlib import Path
 from fastapi import Query
 from PIL import Image
 from io import BytesIO
+from auth.model import  ApiKeySchema
+from auth.auth_handler import signJWT
+from auth.auth_bearer import JWTBearer
+from decouple import config
+
+
+API_KEY=config("apiKey")
 
 
 # Configure the logger
@@ -42,8 +49,19 @@ app.add_middleware(
 )
 
 
+@app.post("/api/auth",tags=["user"])
+async def user_login(userkey: ApiKeySchema = Body(...)):
+    cleaned_apikey = userkey.apikey.strip()
+    if cleaned_apikey == API_KEY:
+         return signJWT(API_KEY)
+    else:
+         raise HTTPException(status_code=403, detail="Invalid API Key.")
+
+
+
+
 # Define an endpoint to receive and save the image
-@app.post("/remove_background/")
+@app.post("/remove_background/",dependencies=[Depends(JWTBearer())],tags=['Remove Background'])
 async def remove_background(file: UploadFile):
     try:
         # Create a directory to save the uploaded files if it doesn't exist
@@ -73,7 +91,7 @@ async def remove_background(file: UploadFile):
     
     
 # Define an endpoint to replace the background
-@app.post("/replace_background/")
+@app.post("/replace_background/",dependencies=[Depends(JWTBearer())],tags=['Replace Background'])
 async def rep_background(file: UploadFile, background: UploadFile):
     try:
         # Create a directory to save the uploaded files if it doesn't exist
@@ -142,7 +160,7 @@ model = ObjectRemove(segmentModel=rcnn,
                 rcnn_transforms=transforms,
                 inpaintModel=deepfill)
 
-@app.post("/remove_object/")
+@app.post("/remove_object/",dependencies=[Depends(JWTBearer())],tags=['Remove Object'])
 async def rep_background(file: UploadFile,
                         x1: float = Query(..., description="X1-coordinate"),
                         y1: float = Query(..., description="Y1-coordinate"),
