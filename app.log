@@ -45,3 +45,5 @@ pip install python-multipart
 2024-01-11 18:19:46,486 [ERROR] - An error occurred: '_OpNamespace' 'image' object has no attribute 'read_file'
 2024-01-11 18:27:21,152 [ERROR] - An error occurred: '_OpNamespace' 'image' object has no attribute 'read_file'
 2024-01-11 18:40:42,821 [ERROR] - An error occurred: '_OpNamespace' 'image' object has no attribute 'read_file'
+2024-01-25 08:32:39,808 [ERROR] - An error occurred: local variable 'resized_img' referenced before assignment
+2024-01-25 08:32:57,269 [ERROR] - An error occurred: local variable 'resized_img' referenced before assignment
