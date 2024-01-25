@@ -30,6 +30,7 @@ WORKDIR /app
 # Copy the requirements file and install Python dependencies
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
+RUN pip3 install pydantic[email]
 
 # Copy the rest of your application's code
 COPY . .
