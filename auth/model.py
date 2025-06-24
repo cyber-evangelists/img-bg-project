@@ -8,9 +8,9 @@ class UserSchema(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "fullname": "Abdulazeez Abdulazeez Adeshina",
-                "email": "abdulazeez@x.com",
-                "password": "weakpassword"
+                "fullname": "",
+                "email": "",
+                "password": ""
             }
         }
 
@@ -21,8 +21,8 @@ class UserLoginSchema(BaseModel):
     class Config:
         schema_extra = {
             "example": {
-                "email": "abdulazeez@x.com",
-                "password": "weakpassword"
+                "email": "",
+                "password": ""
             }
         }
 
@@ -32,6 +32,6 @@ class ApiKeySchema(BaseModel):
     class Config:
         schema_extra={
             "example":{
-                "apiKey":"abcdefghalokijhj"
+                "apiKey":""
             }
         }
